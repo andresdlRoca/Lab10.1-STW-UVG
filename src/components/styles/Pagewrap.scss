@@ -1,0 +1,76 @@
+.page-wrap {
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    background-color: orange;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .kanjiImg {
+        position: absolute;
+        top: 3.5%;
+        right: 5%;
+        width: 15%;
+        transition: 0.3s;
+        animation: kanjiFlick 3s infinite linear ;
+    }
+
+    .kanjiImg:hover {
+        transform: scale(1.2);
+    }
+
+    .kanjiImg:active {
+        transform: scale(1.3);
+    }
+
+    .carImg {
+        position: absolute;
+        bottom: 3.5%;
+        left: 5%;
+        width: 15%;
+        transition: 0.3s;
+    }
+
+    .carImg:hover {
+        filter:brightness(1.2);
+    }
+
+    .carImg:active {
+        transform: rotate(5deg) scale(1.2);
+        //transform:;
+    }
+
+}
+
+@keyframes kanjiFlick {
+    0% {
+        filter: grayscale(0);
+    }
+
+    25% {
+        filter: grayscale(1);
+    }
+
+    75% {
+        filter: grayscale(0.1);
+    }
+
+    80% {
+        filter: grayscale(0.2);
+    }
+
+    85% {
+        filter: grayscale(0.1);
+    }
+
+    90% {
+        filter: grayscale(0.5);
+    }
+
+    100% {
+        filter: grayscale(0);
+    }
+}

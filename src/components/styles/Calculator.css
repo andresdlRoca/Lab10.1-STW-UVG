@@ -1,0 +1,392 @@
+@font-face {
+  font-family: "VCR OSD Mono";
+  src: url(../../assets/fonts/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf);
+}
+
+.mod {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: mod;
+}
+
+.Clear {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: Clear;
+}
+
+.plusSlashminus {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: plusSlashminus;
+}
+
+.divide {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: divide;
+}
+
+.seven {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: seven;
+}
+
+.eigth {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: eight;
+}
+
+.nine {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: nine;
+}
+
+.multiplication {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: multiplication;
+}
+
+.four {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: four;
+}
+
+.five {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: five;
+}
+
+.six {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: six;
+}
+
+.substraction {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: substraction;
+}
+
+.one {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+
+.two {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: two;
+}
+
+.three {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: three;
+}
+
+.sum {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: sum;
+}
+
+.zero {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: zero;
+}
+
+.dot {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: dot;
+}
+
+.equals {
+  -ms-grid-row: 5;
+  -ms-grid-column: 4;
+  grid-area: equals;
+}
+
+.key {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-animation: turningon 8s;
+          animation: turningon 8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transition: 0.18s;
+  transition: 0.18s;
+  cursor: pointer;
+}
+
+.key p {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  font-size: 30px;
+  font-family: "VCR OSD Mono";
+}
+
+.key:hover {
+  background-color: #2c116579;
+}
+
+.key:active {
+  background-color: #271d3e79;
+}
+
+@-webkit-keyframes turningon {
+  5% {
+    opacity: 0.8;
+  }
+  15% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.1;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+@keyframes turningon {
+  5% {
+    opacity: 0.8;
+  }
+  15% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.1;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.CalculatorBody {
+  position: relative;
+  width: 400px;
+  height: 550px;
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 10%;
+  margin: 0 auto;
+  background-color: #2b1165;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2b1165), color-stop(37%, #1a3a82), color-stop(69%, #ab24b1), to(#f54171));
+  background: linear-gradient(180deg, #2b1165 0%, #1a3a82 37%, #ab24b1 69%, #f54171 100%);
+  overflow: hidden;
+  border: 5px solid rgba(22, 182, 212, 0.3);
+  -webkit-animation: flicker 8s;
+          animation: flicker 8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.CalculatorBody .startupImg {
+  position: absolute;
+  width: 45%;
+  top: 30%;
+  left: 27%;
+  opacity: 20%;
+  -webkit-animation: fadeout 1s;
+          animation: fadeout 1s;
+  -webkit-animation-delay: 7.5s;
+          animation-delay: 7.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 3;
+}
+
+.CalculatorBody .calculatorLayout {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: 90%;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas: "Clear mod plusSlashminus divide" "seven eight nine multiplication" "four five six substraction" "one two three sum" "zero zero dot equals";
+}
+
+.CalculatorBody .calculatorScreen {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 12.5%;
+}
+
+.CalculatorBody .calculatorScreen .inputtedText {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-top: 2.5%;
+  padding-left: 12.5%;
+  margin: 0 auto;
+  font-family: "VCR OSD Mono";
+  font-size: 55px;
+  text-align: center;
+  opacity: 85%;
+}
+
+.stripe {
+  width: 100%;
+  height: 10px;
+  border-radius: 15%;
+  -webkit-filter: drop-shadow(0 0 20px rgba(190, 13, 107, 0.655));
+          filter: drop-shadow(0 0 20px rgba(190, 13, 107, 0.655));
+  overflow: hidden;
+  position: absolute;
+  background-color: #2c116510;
+  -webkit-animation: scanline 8s linear infinite;
+          animation: scanline 8s linear infinite;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+  z-index: 3;
+  pointer-events: none;
+}
+
+@-webkit-keyframes scanline {
+  from {
+    -webkit-transform: translateY(600px);
+            transform: translateY(600px);
+  }
+}
+
+@keyframes scanline {
+  from {
+    -webkit-transform: translateY(600px);
+            transform: translateY(600px);
+  }
+}
+
+.overlayAesthethic {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  background-size: 5px 5px, 5px 5px;
+  background-position: -1px -1px, -1px -1px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  mix-blend-mode: difference;
+  z-index: 3;
+  pointer-events: none;
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    opacity: 20%;
+  }
+  to {
+    opacity: 60%;
+    -webkit-transform: scale(0.4) translateX(-375px) translateY(-510px);
+            transform: scale(0.4) translateX(-375px) translateY(-510px);
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 20%;
+  }
+  to {
+    opacity: 60%;
+    -webkit-transform: scale(0.4) translateX(-375px) translateY(-510px);
+            transform: scale(0.4) translateX(-375px) translateY(-510px);
+  }
+}
+
+@-webkit-keyframes flicker {
+  0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
+    color: #1f0e28;
+    text-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border: 3px solid rgba(242, 0, 255, 0.3);
+    background-color: #2c116580;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2b1165), color-stop(37%, rgba(26, 58, 130, 0.5)), color-stop(69%, rgba(171, 36, 177, 0.5)), to(#f54171));
+    background: linear-gradient(180deg, #2b1165 0%, rgba(26, 58, 130, 0.5) 37%, rgba(171, 36, 177, 0.5) 69%, #f54171 100%);
+  }
+  18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 100% {
+    border: 3px solid #f200ff;
+    color: #ffc2fd;
+    text-shadow: 0 0 10px #f205ae, 0 0 20px #f205ae, 0 0 40px #f205ae, 0 0 80px #f205ae, 0 0 160px #f205ae, 0 0 320px #f205ae, 0 0 640px #f205ae;
+    -webkit-box-shadow: inset 0 0 10px rgba(242, 0, 255, 0.5), inset 0 0 20px rgba(242, 0, 255, 0.5), 0 0 10px rgba(242, 0, 255, 0.3), 0 0 20px rgba(242, 0, 255, 0.3), 0 0 40px rgba(242, 0, 255, 0.3), 0 0 80px rgba(242, 0, 255, 0.3), 0 0 160px rgba(242, 0, 255, 0.3), 0 0 320px rgba(242, 0, 255, 0.3);
+            box-shadow: inset 0 0 10px rgba(242, 0, 255, 0.5), inset 0 0 20px rgba(242, 0, 255, 0.5), 0 0 10px rgba(242, 0, 255, 0.3), 0 0 20px rgba(242, 0, 255, 0.3), 0 0 40px rgba(242, 0, 255, 0.3), 0 0 80px rgba(242, 0, 255, 0.3), 0 0 160px rgba(242, 0, 255, 0.3), 0 0 320px rgba(242, 0, 255, 0.3);
+  }
+}
+
+@keyframes flicker {
+  0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
+    color: #1f0e28;
+    text-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border: 3px solid rgba(242, 0, 255, 0.3);
+    background-color: #2c116580;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2b1165), color-stop(37%, rgba(26, 58, 130, 0.5)), color-stop(69%, rgba(171, 36, 177, 0.5)), to(#f54171));
+    background: linear-gradient(180deg, #2b1165 0%, rgba(26, 58, 130, 0.5) 37%, rgba(171, 36, 177, 0.5) 69%, #f54171 100%);
+  }
+  18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 100% {
+    border: 3px solid #f200ff;
+    color: #ffc2fd;
+    text-shadow: 0 0 10px #f205ae, 0 0 20px #f205ae, 0 0 40px #f205ae, 0 0 80px #f205ae, 0 0 160px #f205ae, 0 0 320px #f205ae, 0 0 640px #f205ae;
+    -webkit-box-shadow: inset 0 0 10px rgba(242, 0, 255, 0.5), inset 0 0 20px rgba(242, 0, 255, 0.5), 0 0 10px rgba(242, 0, 255, 0.3), 0 0 20px rgba(242, 0, 255, 0.3), 0 0 40px rgba(242, 0, 255, 0.3), 0 0 80px rgba(242, 0, 255, 0.3), 0 0 160px rgba(242, 0, 255, 0.3), 0 0 320px rgba(242, 0, 255, 0.3);
+            box-shadow: inset 0 0 10px rgba(242, 0, 255, 0.5), inset 0 0 20px rgba(242, 0, 255, 0.5), 0 0 10px rgba(242, 0, 255, 0.3), 0 0 20px rgba(242, 0, 255, 0.3), 0 0 40px rgba(242, 0, 255, 0.3), 0 0 80px rgba(242, 0, 255, 0.3), 0 0 160px rgba(242, 0, 255, 0.3), 0 0 320px rgba(242, 0, 255, 0.3);
+  }
+}
+/*# sourceMappingURL=Calculator.css.map */
