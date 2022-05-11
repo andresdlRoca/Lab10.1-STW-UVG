@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React, { useState, useRef } from "react"
 import backgroundIMG from "../assets/background.jpg"
 import kanji from "../assets/vaporwaveKanji.png"
@@ -25,11 +29,11 @@ export default function Pagewrap() {
 	}
 
 	return (
-		<div className="page-wrap" style={{ backgroundImage: `url(${backgroundIMG})`}} >
+		<div data-testid="background-img-test" className="page-wrap" style={{ backgroundImage: `url(${backgroundIMG})`}} >
 			<Calculator />
-			<img className="kanjiImg" src={kanji} alt="Kanji" onClick={() => actualizarMusica(sweetsmile)}/>
-			<img className="carImg" src={car} alt="Spinning car" onClick={() => actualizarMusica(bladerunner)}/>
-			<audio className="audiosource" autoPlay={false} loop={false} ref={audioRef}><source type="audio/mp3" src={audiosrc}/></audio>
+			<img data-testid="kanji-img-test" className="kanjiImg" src={kanji} alt="Kanji" onClick={() => actualizarMusica(sweetsmile)}/>
+			<img data-testid="car-img-test" className="carImg" src={car} alt="Spinning car" onClick={() => actualizarMusica(bladerunner)}/>
+			<audio data-testid="audio-test" className="audiosource" autoPlay={false} loop={false} ref={audioRef}><source type="audio/mp3" src={audiosrc}/></audio>
 		</div>
   
 	)
