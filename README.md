@@ -5,5 +5,6 @@ Andrès de la Roca - 20332
 ## Ejecución de testing
 En terminal:
 ```
+npm install
 npm test
 ```
