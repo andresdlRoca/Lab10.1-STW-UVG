@@ -1,11 +1,12 @@
 {
-  "name": "Lab10",
+  "name": "lab10.1",
   "version": "1.0.0",
   "description": "",
   "main": "index.jsx",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "",
@@ -14,11 +15,15 @@
     "@babel/core": "^7.17.8",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "babel-jest": "^28.1.0",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.7.1",
     "eslint": "^8.14.0",
     "eslint-plugin-react": "^7.29.4",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^28.1.0",
     "mini-css-extract-plugin": "^2.6.0",
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2"
